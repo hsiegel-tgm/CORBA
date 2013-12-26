@@ -1,5 +1,4 @@
 
-
 /**
  * The Class Methods is just needed to implementing some methods which i didn't wanted to but into the real code
  * 
