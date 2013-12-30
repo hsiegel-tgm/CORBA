@@ -12,7 +12,7 @@ public class Start {
         	}
         	else{
                         if(arg[0].equals("Client")){
-                                new Client();
+                                new Client(null);
                         }
                         else if(arg[0].equals("Server")){
                                 new Server(null);   //TODO: Aendern!!                     

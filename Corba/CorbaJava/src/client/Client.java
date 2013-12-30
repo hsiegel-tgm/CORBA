@@ -4,6 +4,7 @@ package client;
 import org.omg.CosNaming.*;  // HelloClient will use the naming service.
 import org.omg.CORBA.*;      // All CORBA applications need these classes.
 
+import others.M;
 import calculator.common.*;// The package containing our stubs.
 
 /**
@@ -32,9 +33,8 @@ public class Client {
 		int message = calculatorRef.add(0, 0);
 		System.out.println( message);
 		}
-	catch(Exception e) {
-		System.out.println("ERROR : " + e);
-		e.printStackTrace(System.out);
+		catch(Exception e) {
+			M.printException(e);
 		}  
 	}
 	}
