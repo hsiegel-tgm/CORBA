@@ -1,8 +1,8 @@
 
 package others;
 
-import Server.Server;
-import Client.Client;
+import server.Server;
+import client.Client;
 
 public class Start {
         public static void main(String arg[]){
