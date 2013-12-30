@@ -1,12 +1,9 @@
 module calculator {
 	module common {
-		exception CalculatorException {
-			string details;
-		};
+	
 		interface Calculator {
 			long add(in long a, in long b);
 			long sub(in long a, in long b);
-			raises (CalculatorException));
 		};
 	};
 };
