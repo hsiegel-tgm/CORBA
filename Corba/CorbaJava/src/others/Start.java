@@ -12,10 +12,22 @@ public class Start {
         	}
         	else{
                         if(arg[0].equals("Client")){
+                        	String a [] = new String [4];
+
+                        	a [0]= "-ORBInitialPort";
+                        	a [1]= "1050";
+                        	a [2]= "-ORBInitialHost";
+                        	a [3]= "-localhost&";
                                 new Client(null);
                         }
                         else if(arg[0].equals("Server")){
-                                new Server(null);   //TODO: Aendern!!                     
+                        	String a [] = new String [4];
+                        	a [0]= "-ORBInitialPort";
+                        	a [1]= "1050";
+                        	a [2]= "-ORBInitialHost";
+                        	a [3]= "-localhost&";
+
+                        	new Server(null);   //TODO: Aendern!!                     
                         }
                         else{
                                 printUsage();

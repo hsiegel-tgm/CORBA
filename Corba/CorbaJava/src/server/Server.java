@@ -47,16 +47,21 @@ public class Server {
             String s = orb.object_to_string(ref);
             M.debug("The IOR of the object is: "+s);
             
-			Calculator href = (Calculator) CalculatorHelper.narrow(ref);
+            
+			//Calculator href = (Calculator) CalculatorHelper.narrow(ref);
 
 			//NamingContextExt ncRef = NamingContextExtHelper.narrow(orb.resolve_initial_references("NameService"));
 			NamingContext ncRef = NamingContextHelper.narrow(orb.resolve_initial_references("NameService"));
-
+			M.debug("Hello");
 			   org.omg.CosNaming.NameComponent[] name = new org.omg.CosNaming.NameComponent[1];
 	            name[0] = new NameComponent();
 	            name[0].id = "CalculatorService";
 	            name[0].kind = "";
-			ncRef.rebind(name, (Object) href); 
+				M.debug("Hello2");
+
+			ncRef.rebind(name, ref); 
+			M.debug("Hello3");
+
 			System.out.println("Server ready and waiting for requests...");
 
 			// wait for invocations from clients
@@ -66,6 +71,7 @@ public class Server {
 
 		catch (Exception e) {
 			M.printException(e);
+			e.printStackTrace();
 		}
 
 		System.out.println("Server's done ...");
