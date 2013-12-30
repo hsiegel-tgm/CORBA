@@ -14,7 +14,7 @@ public abstract class CalculatorPOA extends org.omg.PortableServer.Servant
 
   // Constructors
 
-  private static java.util.Hashtable _methods = new java.util.Hashtable ();
+  private static java.util.Hashtable <String,Integer> _methods = new java.util.Hashtable <String,Integer>();
   static
   {
     _methods.put ("add", new java.lang.Integer (0));

@@ -15,7 +15,7 @@ public class Start {
                                 new Client();
                         }
                         else if(arg[0].equals("Server")){
-                                new Server();                        
+                                new Server(null);   //TODO: Aendern!!                     
                         }
                         else{
                                 printUsage();
